@@ -1,2 +1,2 @@
 # JaysOnlineOrdering
-Website for Etown Jay's Nest online ordering.
+Website for Etown Jays Nest online ordering.
