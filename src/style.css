@@ -15,8 +15,11 @@ html, body {
     padding:1px;
 }
 
-.header-title {
+h1, h2, h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header-title {
     text-align: left;
     margin:0;
     padding:4px;

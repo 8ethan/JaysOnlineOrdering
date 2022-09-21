@@ -12,6 +12,10 @@
         require('header.php');
         require('navbar.php');
     ?>
+
+    <div class="main">
+        <h2>Please log in to order.</h2>
+    </div>
     
 </body>
 </html>
