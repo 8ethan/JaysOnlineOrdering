@@ -9,8 +9,8 @@
 <body>
 
     <?PHP
-        require('header.php')
-        #require('navbar.php')
+        require('header.php');
+        require('navbar.php');
     ?>
     
 </body>
