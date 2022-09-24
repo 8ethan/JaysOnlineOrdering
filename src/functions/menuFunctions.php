@@ -16,7 +16,9 @@ function  displayMenu(){
 function displayItem($itemName, $price, $category, $description, $calories, $available){
 
     echo '
-    <p>'.$itemName.': '.$price.'  |<p>
+    <div class="menuItem">
+    <p class="itemName">'.$itemName.': '.$price.'  |<p>
+    </div>
     ';
 
 }

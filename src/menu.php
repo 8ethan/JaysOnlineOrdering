@@ -1,9 +1,8 @@
 <?php
-    require("menuFunctions.php");
-    require("config.php");
-    require("database_functions.php");
+    require("functions/menuFunctions.php");
+    require("functions/config.php");
+    require("functions/database_functions.php");
 ?>
-
 
 <div id="menu-container">
 
@@ -11,6 +10,5 @@
     <?php
         displayMenu();
     ?>
-
 
 </div>

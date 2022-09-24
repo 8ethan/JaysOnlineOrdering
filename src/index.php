@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jays Online Ordering</title>
+    <script src="scripts.js"></script>
 </head>
 <body>
 
@@ -20,7 +21,8 @@
 
         <!-- Display menu if signed in -->
         <?php
-            require('menu.php')
+            require('filters.php');
+            require('menu.php');
         ?>
     </div>
     
