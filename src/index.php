@@ -11,10 +11,17 @@
     <?PHP
         require('header.php');
         require('navbar.php');
+
     ?>
 
     <div class="main">
-        <h2>Please log in to order.</h2>
+        <!--Display something if user is not logged in-->
+        <!-- <h2>Please log in to order.</h2> -->
+
+        <!-- Display menu if signed in -->
+        <?php
+            require('menu.php')
+        ?>
     </div>
     
 </body>
