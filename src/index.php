@@ -11,7 +11,6 @@
 
     <?PHP
         require('header.php');
-        require('navbar.php');
 
     ?>
 
@@ -21,6 +20,7 @@
 
         <!-- Display menu if signed in -->
         <?php
+            require('navbar.php');
             require('filters.php');
             require('menu.php');
         ?>

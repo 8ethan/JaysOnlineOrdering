@@ -17,7 +17,8 @@ function displayItem($itemName, $price, $category, $description, $calories, $ava
 
     echo '
     <div class="menuItem">
-    <p class="itemName">'.$itemName.': '.$price.'  |<p>
+        <p class="itemName">'.$itemName.'<br> $'.$price.'  |</p>
+        <button type="button" class="orderButton"> Order </button>
     </div>
     ';
 

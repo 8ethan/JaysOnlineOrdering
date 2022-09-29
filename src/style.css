@@ -38,17 +38,20 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  height: 1000px;
+  overflow-y:scroll;
 }
 
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
+  /*position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  /*z-index: 1; /* Stay on top */
   /*top: 0;*/ /* Stay at the top */
-  left: 0;
+  /*left: 0;*/
   background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  /*overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
   
@@ -76,4 +79,20 @@ h1, h2, h3 {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.menuItem {
+  margin: 10px;
+  padding: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #818181;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.orderButton {
+  width: 100%;
 }
