@@ -21,7 +21,7 @@ function getCategories() {
     echo '<option value="test">help me</option>';
     foreach ($data as $item){
 
-        echo '<option value=" '.$item['category'].' ">'.$item['category'].'</option>';
+        echo '<option value="'.$item['category'].'">'.$item['category'].'</option>';
 
         /*displayItem($item['itemName'],$item['price'],$item['category'],$item['description'],$item['calories'],$item['isAvailable']);*/
     }

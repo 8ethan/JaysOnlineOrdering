@@ -1,3 +1,4 @@
+window.addEventListener("load",filterMenu)
 
 function filterMenu(){
     var input, filter, i, txtValue, cat, category;
