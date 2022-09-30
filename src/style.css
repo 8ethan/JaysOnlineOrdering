@@ -89,24 +89,38 @@ h3 {
 }
 
 .sidenav {
-  min-width: 200px;   /* Set the width of the sidebar */
+  min-width: 210px;   /* Set the width of the sidebar */
   background-color: #111; /* Dark gray */
   padding-top: 20px;
 }
-
 /* The navigation menu links */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 12px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block; /* Display each link as a block */
 }
-
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
   background-color: rgb(51, 51, 51);
+}
+
+#yoder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#yoderNotif {
+  display: inline;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  border-radius: 7px;
+  margin-left: auto;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
