@@ -3,6 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family:'Verdana';
 }
 
 body {
@@ -16,23 +17,35 @@ h3 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+/* Etown official colors:
+  - Main blue   004B98
+  - Dark blue   0A2240
+  - Red         E1261C
+  - Light blue  3DB5E6
+  - Cool gray   C8C8C8
+  */
+
 #header-container {
   height: 50px;
-  background-color: rgb(115, 197, 255);
-  border-bottom: 2px solid #003aa4;
+  background-color: #004B98;
+  /*old rgb(115, 197, 255);*/
+  border-bottom: 2px solid #0A2240;
+  /* old #003aa4 */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0px 16px;
+  color: white;
 }
 
 .header-title {
   text-align: left;
   margin: 0;
   padding: 4px;
-  color: #003aa4;
+  /*color: #003aa4;*/
 }
 
 .login-button {
@@ -40,7 +53,8 @@ h3 {
   font-size: 28px;
   margin: 0;
   margin-right: 10px;
-  color: #003aa4;
+  color: white;
+  /*color: #003aa4;*/
 }
 
 .main {
@@ -70,11 +84,12 @@ h3 {
   overflow-y: scroll;
 
   border-top: 1px solid black;
+  background-color: white;
   padding: 2px;
 }
 
 .sidenav {
-  min-width: 160px;   /* Set the width of the sidebar */
+  min-width: 200px;   /* Set the width of the sidebar */
   background-color: #111; /* Dark gray */
   padding-top: 20px;
 }
@@ -91,6 +106,7 @@ h3 {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
+  background-color: rgb(51, 51, 51);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -104,6 +120,9 @@ h3 {
   }
 }
 
+#menu {
+  background-color: #C8C8C8;
+}
 #menu input,#menu select {
   width: 150px;
   margin: 10px;
@@ -112,19 +131,24 @@ h3 {
 .menuItem {
   margin: 10px;
   padding: 10px;
-  height: 200px;
+  /*height: 200px;*/
   width: 200px;
   border-radius: 5px;
   background-color: #818181;
   display: flex;
   justify-content: end;
   flex-direction: column;
+  box-shadow: 3px 10px #111;
 }
-
 .menuItem > p.cat {
   display: none;
 }
-
+.menuItem > p {
+  margin: 7px 0px;
+}
+.menuItem > img {
+  border-radius: 4px;
+}
 .orderButton {
   width: 100%;
 }
