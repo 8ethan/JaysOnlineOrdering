@@ -113,13 +113,15 @@ h3 {
   align-items: center;
 }
 #yoderNotif {
+  padding-top: 2px;
   display: inline;
-  height: 30px;
+  height: 28px;
   width: 30px;
   text-align: center;
   color: white;
+  font-size: 80%;
   background-color: red;
-  border-radius: 7px;
+  border-radius: 16px;
   margin-left: auto;
 }
 
