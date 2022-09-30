@@ -67,14 +67,8 @@ h3 {
 }
 
 #menu-container {
-  /* Firefox */
-  height: -moz-calc(100vh - 105px);
-  /* WebKit */
-  height: -webkit-calc(100vh - 105px);
-  /* Opera */
-  height: -o-calc(100vh - 105px);
-  /* Standard */
-  height: calc(100vh - 95px);
+  height: calc(100vh - 100px);
+  width: calc(100vw - 214px);
 
   display: flex;
   /*Justify-content: space-around;*/

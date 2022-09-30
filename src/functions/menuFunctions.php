@@ -1,6 +1,5 @@
 <?php
 
-
 function  displayMenu(){
     $pdo = connect_to_db();
     $stmt = $pdo->prepare("SELECT * FROM menu WHERE isAvailable=:available");
@@ -26,9 +25,7 @@ function getCategories() {
     }
 }
 
-
 function displayItem($itemName, $price, $category, $description, $calories, $available){
-
     echo '
     <div class="menuItem">
         <img src="../img/filler.jpg">
@@ -37,9 +34,5 @@ function displayItem($itemName, $price, $category, $description, $calories, $ava
         <button type="button" class="orderButton"> Order </button>
     </div>
     ';
-
 }
-
-
-
 ?>
