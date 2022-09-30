@@ -13,7 +13,10 @@
 
     <?PHP
     require('header.php');
-
+    
+    require("functions/database_functions.php");
+    require("functions/menuFunctions.php");
+    require("functions/config.php");
     ?>
 
     <div class="main">

@@ -2,49 +2,77 @@
 
 <head>
     <style>
-        html,body {
+        html,
+        body {
             margin: 0;
             height: 100%;
         }
+
         body {
             display: flex;
             flex-direction: column;
         }
-        body > * {
+
+        /*
+        body>* {
             border: 5px;
             border-style: solid;
             border-color: black;
-        }
+        }*/
+
         #header {
-            flex-shrink: 1;
+            /*
+            position: fixed;
+            left: 0;
+            top:0;
+            z-index: 1;
+            width: 100%;
+            */
+
+
+            background-color: blue;
+            height: 112px;
             padding: 10px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
         }
+
         #main {
-            position: relative;
-            height: 100%;
+            /* Firefox */
+            height: -moz-calc(100% - 112px);
+            /* WebKit */
+            height: -webkit-calc(100% - 112px);
+            /* Opera */
+            height: -o-calc(100% - 112px);
+            /* Standard */
+            height: calc(100% - 112px);
+            
             display: flex;
             flex-direction: row;
         }
+
         #nav {
             padding: 10px;
             min-width: 150px;
             background-color: red;
         }
+
         #nav a {
             padding: 5px;
             display: block;
         }
+
         #menu {
+
             padding: 10px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             overflow-y: scroll;
         }
+
         #box {
             /*display: none;*/
 
