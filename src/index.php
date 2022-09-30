@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../img/White_E_Logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jays Online Ordering</title>
@@ -28,8 +29,14 @@
         require('navbar.php');
         ?>
         <div id='menu'>
+            <div id='subheader'>
+                <h2>Menu</h2>
+                <div id='vertSpacer'></div>
+                <?php
+                    require('filters.php');
+                ?>
+            </div>
             <?php
-            require('filters.php');
             require('menu.php');
             ?>
         </div>

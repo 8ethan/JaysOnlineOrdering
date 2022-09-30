@@ -18,7 +18,6 @@ function getCategories() {
     $stmt->execute([':available' => 1]); 
     $data = $stmt->fetchall();
     
-    echo '<option value="test">help me</option>';
     foreach ($data as $item){
 
         echo '<option value="'.$item['category'].'">'.$item['category'].'</option>';
