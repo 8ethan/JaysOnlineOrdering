@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -7,10 +8,11 @@
     <title>Jays Online Ordering</title>
     <script src="scripts.js"></script>
 </head>
+
 <body>
 
     <?PHP
-        require('header.php');
+    require('header.php');
 
     ?>
 
@@ -20,11 +22,16 @@
 
         <!-- Display menu if signed in -->
         <?php
-            require('navbar.php');
+        require('navbar.php');
+        ?>
+        <div id='menu'>
+            <?php
             require('filters.php');
             require('menu.php');
-        ?>
+            ?>
+        </div>
     </div>
-    
+
 </body>
+
 </html>

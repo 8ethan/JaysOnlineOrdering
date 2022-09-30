@@ -1,7 +1,6 @@
-
 <div class="sidenav">
-  <a href="#">Item 1</a>
-  <a href="#">Item 2</a>
-  <a href="#">Item 3</a>
-  <a href="#">Item 4</a>
+  <a href="#">Menu</a>
+  <a href="#">Your Order</a>
+  <a href="#">Stats</a>
+  <a href="#">Admin</a>
 </div>

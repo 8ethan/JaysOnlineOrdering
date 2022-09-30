@@ -1,37 +1,55 @@
-html, body {
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
+body {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #header-container {
-  width:100%;
-  background-color:rgb(115, 197, 255);
+  width: 100%;
+  height: 50px;
+  background-color: rgb(115, 197, 255);
   border-bottom: 2px solid #003aa4;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin:0;
-  padding:1px;
-}
-
-h1, h2, h3 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 1px;
 }
 
 .header-title {
   text-align: left;
-  margin:0;
-  padding:4px;
+  margin: 0;
+  padding: 4px;
   color: #003aa4;
 }
 
 .login-button {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 28px;
-  margin:0;
-  margin-right:10px;
+  margin: 0;
+  margin-right: 10px;
   color: #003aa4;
+}
+
+.main {
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 #menu-container {
@@ -39,29 +57,22 @@ h1, h2, h3 {
   justify-content: space-around;
   flex-wrap: wrap;
 
-  height: 1000px;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  /*position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  /*z-index: 1; /* Stay on top */
-  /*top: 0;*/ /* Stay at the top */
-  /*left: 0;*/
-  background-color: #111; /* Black */
-  /*overflow-x: hidden; /* Disable horizontal scroll */
+  min-width: 160px;   /* Set the width of the sidebar */
+  background-color: #111; /* Dark gray */
   padding-top: 20px;
 }
-  
-  /* The navigation menu links */
+
+/* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: block;
+  display: block; /* Display each link as a block */
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -69,16 +80,18 @@ h1, h2, h3 {
   color: #f1f1f1;
 }
 
-/* Style page content */
-.main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#menu {
 }
 
 .menuItem {
