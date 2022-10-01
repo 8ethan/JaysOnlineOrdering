@@ -1,4 +1,3 @@
-window.addEventListener("load",filterMenu)
 
 function filterMenu(){
     var input, filter, i, txtValue, cat, category;
@@ -21,4 +20,9 @@ function filterMenu(){
             items[i].style.display = "none";
         }
     }
+}
+
+function setActive(elem){
+    elem.classList.add("active");
+    //console.log(elem.classList);
 }
