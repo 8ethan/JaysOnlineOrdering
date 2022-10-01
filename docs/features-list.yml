@@ -1,0 +1,43 @@
+features:
+  - food database
+    - food name
+    - food price
+    - food category
+  - login
+    - sends users to etown official network account login
+  - info section
+    - instructions for how to use the website
+    - link to external sites
+      - etown's official jay's nest frontpage
+      - jayweb finance page for seeing remaining jaybucks
+    - signature/some information about us as devs for the website
+  - food ordering interface
+    - menu section
+      - tiles/"cards" for each food item
+        - food image
+        - food name
+        - food price
+        ? calories/ingredients
+        - order button
+    - search/filtering methods
+      - category-search dropdown menu
+      - textbox search bar
+    - order section
+      - navbar indicator for how many items are currently in order/"cart"
+      - list of food items currently in order/"cart"
+      - remove button for each item
+      - 'add notes' button for each item
+      - display total price
+      - order confirm button
+      - order cancel/clear button
+      ? specify a time that the order should be prepared
+  - admin sections
+    * make these sections only visible to accounts with admin status
+    - stats
+      - display statistics for how/what food is ordered
+    - control panel/formal 'admin' section
+      - options for adding/removing admin users
+      - options for selecting/importing/exporting current food database
+      - options for altering rows in database
+      - options for hidden food options or marking them as currently out-of-stock or unavailable
+    

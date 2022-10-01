@@ -17,7 +17,6 @@ h3 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
 /* Etown official colors:
   - Main blue   004B98
   - Dark blue   0A2240
@@ -71,7 +70,6 @@ h3 {
   width: calc(100vw - 214px);
 
   display: flex;
-  /*Justify-content: space-around;*/
   flex-wrap: wrap;
   justify-content: left;
   align-items: top;
@@ -166,7 +164,7 @@ a.active{
   box-shadow: 3px 6px #111,
     2px 4px #111,
     1px 2px #111,
-    4px 8px #111;
+    4px 8px #111; /* Makes shadow look extended */
 }
 .menuItem > p.cat {
   display: none;
