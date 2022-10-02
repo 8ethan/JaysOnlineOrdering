@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -11,10 +10,8 @@ body {
   flex-direction: column;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+h1, h2, h3 {
+  font-family: 'Trebuchet MS',s 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Etown official colors:
@@ -57,9 +54,7 @@ h3 {
 }
 
 .main {
-
   height: 100%;
-
   padding: 0px;
   display: flex;
   flex-direction: row;
@@ -103,32 +98,41 @@ a.active{
   background-color:green;
 }
 
-#yoder {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 #yoderNotif {
-  padding-top: 2px;
-  display: inline;
-  height: 28px;
+  height: 30px;
   width: 30px;
   text-align: center;
   color: white;
-  font-size: 80%;
+  font-size: 100%;
   background-color: red;
   border-radius: 16px;
-  margin-left: auto;
+  float:right;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+@media screen and (max-width: 550px) {
+  .header-title {
+    font-size: 100%;
   }
 
+  .login-button {
+    font-size: 125%;
+  }
+
+  #subheader h2{
+    font-size: 90%;
+  }
+
+  .sidenav {
+    padding-top: 15px;
+    min-width: 160px;
+  }
   .sidenav a {
-    font-size: 18px;
+    font-size: 100%;
+  }
+  #yoderNotif {
+    height: 22px;
+    width: 22px;
   }
 }
 
