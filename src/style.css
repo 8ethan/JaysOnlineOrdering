@@ -110,7 +110,7 @@ a.active{
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .header-title {
     font-size: 100%;
   }
@@ -119,8 +119,9 @@ a.active{
     font-size: 125%;
   }
 
-  #subheader h2{
-    font-size: 90%;
+  #subheader h2, #vertSpacer{
+    display: none;
+    /* font-size: 90%; */
   }
 
   .sidenav {
@@ -138,22 +139,31 @@ a.active{
 
 #subheader {
   display: flex;
+  align-items: center;
   background-color: #C8C8C8;
-
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 #subheader h2 {
-  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 4px;
   margin-left: 15px;
 }
 #vertSpacer {
-  margin: 6px 15px;
-  width: 0px;
-  border-left: solid 1px black;
+  margin: 2px 15px;
+  height: 24px;
+  border-left: solid 2px black;
 }
 #subheader input,#subheader select {
   width: 150px;
-  margin: 10px ;
+  font-size: 90%;
+  padding-top:6px;
+  padding-bottom:6px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
+
 
 .menuItem {
   margin: 10px;
