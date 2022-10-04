@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Trebuchet MS',s 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Etown official colors:
@@ -98,7 +98,8 @@ a.active{
   background-color:green;
 }
 
-#yoderNotif {
+#yoderNotif { 
+  display: none;
   height: 30px;
   width: 30px;
   text-align: center;
