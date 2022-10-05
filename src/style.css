@@ -100,7 +100,7 @@ a.active{
 }
 
 #yoderNotif { 
-  display: none;
+  /*display: none;*/
   height: 30px;
   width: 30px;
   text-align: center;
