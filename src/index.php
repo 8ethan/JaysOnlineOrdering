@@ -35,6 +35,9 @@
                 <?php
                     require('filters.php');
                 ?>
+                <div id='mobileOrderIcon'>
+                    <img src="../img/bag-icon.png">
+                </div>
             </div>
             <?php
             require('menu.php');

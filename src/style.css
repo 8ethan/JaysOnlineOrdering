@@ -6,6 +6,7 @@ html, body {
 }
 
 body {
+  scrollbar-gutter: stable;
   display: flex;
   flex-direction: column;
 }
@@ -110,38 +111,6 @@ a.active{
   float:right;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-width: 700px) {
-  .header-title {
-    font-size: 100%;
-  }
-
-  .login-button {
-    font-size: 125%;
-  }
-
-  #subheader h2, #vertSpacer{
-    display: none;
-    /* font-size: 90%; */
-  }
-
-  .sidenav {
-    padding-top: 15px;
-    min-width: 160px;
-  }
-  .sidenav a {
-    font-size: 100%;
-  }
-  #yoderNotif {
-    height: 22px;
-    width: 22px;
-  }
-  
-
-  #menu-container {
-    width: calc(100vw - 164px);
-  }
-}
 
 #subheader {
   display: flex;
@@ -169,8 +138,9 @@ a.active{
   margin-left: 10px;
   margin-right: 10px;
 }
-
-
+#mobileOrderIcon {
+  display: none;
+}
 .menuItem {
   margin: 10px;
   padding: 10px;
@@ -193,10 +163,68 @@ a.active{
   margin: 7px 0px;
 }
 .menuItem > img {
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
   border-radius: 4px;
 }
 .orderButton {
   width: 100%;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-width: 700px) {
+  .header-title {
+    font-size: 100%;
+  }
+
+  .login-button {
+    font-size: 125%;
+  }
+
+  #subheader {
+    padding: 7px;
+  }
+  #subheader > *{
+    margin: 0px;
+    margin-right: 7px;
+  }
+
+  #subheader h2, #vertSpacer{
+    display: none;
+    /* font-size: 90%; */
+  }
+
+  #mobileOrderIcon {
+    display: block;
+    height: 31px;
+    border: solid black 1px;
+    border-radius: 4px;
+    margin-left: auto;
+  }
+  #mobileOrderIcon > img {
+    height: 100%;
+  }
+
+  .sidenav {
+    display: none; /* HIDE NAVBAR */
+    padding-top: 15px;
+    min-width: 160px;
+  }
+  .sidenav a {
+    font-size: 100%;
+  }
+  #yoderNotif {
+    height: 22px;
+    width: 22px;
+  }
+  
+  #menu-container {
+    width: calc(100vw - 4px);
+    justify-content: space-around;
+  }
+  .menuItem {
+    margin:  10px auto;
+    width: 37%;
+  }
 }

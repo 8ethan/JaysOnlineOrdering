@@ -28,7 +28,7 @@ function getCategories() {
 function displayItem($itemName, $price, $category, $description, $calories, $available){
     echo '
     <div class="menuItem">
-        <img src="../img/filler.jpg">
+        <img src="../img/filler-food.jpg">
         <p class="cat">'.$category.'</p>
         <p class="itemName">'.$itemName.'<br> $'.$price.'  |</p>
         <button type="button" class="orderButton"> Order </button>
