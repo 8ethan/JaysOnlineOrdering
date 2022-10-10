@@ -242,8 +242,8 @@ a.active{
     overflow-y: scroll;
   }
   .menuItem {
-    margin:  10px ;
-    width: 43%;
+    margin: 1.5%;
+    width: 42%;
   }
 
 }
