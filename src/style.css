@@ -7,6 +7,7 @@ html, body {
 
 body {
   scrollbar-gutter: stable;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -241,4 +242,5 @@ a.active{
     /* margin:  10px auto; */
     width: 37%;
   }
+
 }
