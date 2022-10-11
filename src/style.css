@@ -68,7 +68,8 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  align-items: top;
+  /* align-items: top; */
+  align-content: flex-start;
   overflow-y: scroll;
 
   border-top: 1px solid black;
@@ -113,8 +114,6 @@ a.active{
 
 
 #subheader {
-  display: flex;
-  align-items: center;
   background-color: #C8C8C8;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -124,20 +123,32 @@ a.active{
   margin-bottom: 0;
   margin-right: 4px;
   margin-left: 15px;
+  display:inline;
 }
 #vertSpacer {
   margin: 2px 15px;
   height: 24px;
   border-left: solid 2px black;
+  display:inline;
 }
 #subheader input,#subheader select {
-  width: 150px;
+  display:inline;
+  /* width: 150px; */
   font-size: 90%;
   padding-top:6px;
   padding-bottom:6px;
   margin-left: 10px;
   margin-right: 10px;
 }
+
+#subheader input {
+  width:40%;
+  border-radius: 8px;
+}
+#subheader select{
+  width:25%;
+}
+
 #mobileOrderIcon {
   display: none;
 }
@@ -200,7 +211,9 @@ a.active{
     height: 31px;
     border: solid black 1px;
     border-radius: 4px;
-    margin-left: auto;
+    /* margin-left: auto; */
+    float:right;
+    margin-right: 20px;
   }
   #mobileOrderIcon > img {
     height: 100%;
@@ -220,11 +233,12 @@ a.active{
   }
   
   #menu-container {
+    height:auto;
     width: calc(100vw - 4px);
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .menuItem {
-    margin:  10px auto;
+    /* margin:  10px auto; */
     width: 37%;
   }
 }
