@@ -31,7 +31,7 @@ function displayItem($itemName, $price, $category, $description, $calories, $ava
         <img src="../img/filler-food.jpg">
         <p class="cat">'.$category.'</p>
         <p class="itemName">'.$itemName.'<br> $'.$price.'  |</p>
-        <button type="button" class="orderButton"> Order </button>
+        <button type="button" class="orderButton"> Add to Order </button>
     </div>
     ';
 }
