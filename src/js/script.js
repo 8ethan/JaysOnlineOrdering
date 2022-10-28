@@ -40,7 +40,17 @@
         }
     }
 
-    function updateMenu() {
-        menuContainer.append();
+    function updateMenu(foodItems) {
+        foodItems.forEach(item => {
+            let card = `
+            <div class="menuItem">
+                <img src=${item.imgSrc}>
+                <p class="cat">${item.category}</p>
+                <p class="itemName">${item.name}<br>$${item.price}  |</p>
+                <button type="button" class="orderButton"> Add to Order </button>
+            </div>
+            `;
+            menuContainer.append(card);
+        });
     }
 })();
