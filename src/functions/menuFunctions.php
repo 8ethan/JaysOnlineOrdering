@@ -27,11 +27,11 @@ function getCategories() {
 
 function displayItem($itemName, $price, $category, $description, $calories, $available){
     echo '
-    <div class="menuItem">
+    <div class="menu-item">
         <img src="../img/filler-food.jpg">
         <p class="cat">'.$category.'</p>
-        <p class="itemName">'.$itemName.'<br> $'.$price.'  |</p>
-        <button type="button" class="orderButton"> Add to Order </button>
+        <p class="item-name">'.$itemName.'<br> $'.$price.'  |</p>
+        <button type="button" class="order-button"> Add to Order </button>
     </div>
     ';
 }

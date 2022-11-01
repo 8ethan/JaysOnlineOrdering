@@ -31,11 +31,11 @@
         <div id='menu'>
             <div id='subheader'>
                 <h2>Menu</h2>
-                <div id='vertSpacer'></div>
+                <div id='vert-spacer'></div>
                 <?php
                     require('filters.php');
                 ?>
-                <div id='mobileOrderIcon'>
+                <div id='mobile-order-icon'>
                     <img src="../img/bag-icon.png">
                 </div>
             </div>

@@ -8,8 +8,8 @@
     window.addEventListener('load',init);
 
     function init() {
-        categories = document.getElementById('catInput');
-        searchBox = document.getElementById('filterInput');
+        categories = document.getElementById('cat-input');
+        searchBox = document.getElementById('filter-input');
         menuContainer = document.getElementById('menu-container');
 
         categories.addEventListener("change", search);
@@ -43,10 +43,10 @@
     function updateMenu(foodItems) {
         foodItems.forEach(item => {
             let card = `
-            <div class="menuItem">
+            <div class="menu-item">
                 <img src=${item.imgSrc}>
                 <p class="cat">${item.category}</p>
-                <p class="itemName">${item.name}<br>$${item.price}  |</p>
+                <p class="item-name">${item.name}<br>$${item.price}  |</p>
                 <button type="button" class="orderButton"> Add to Order </button>
             </div>
             `;

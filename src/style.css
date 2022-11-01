@@ -104,7 +104,7 @@ a.active{
   background-color:green;
 }
 
-#yoderNotif { 
+#order-badge { 
   /*display: none;*/
   height: 30px;
   width: 30px;
@@ -129,7 +129,7 @@ a.active{
   margin-left: 15px;
   display:inline;
 }
-#vertSpacer {
+#vert-spacer {
   margin: 2px 15px;
   height: 24px;
   border-left: solid 2px black;
@@ -152,10 +152,10 @@ a.active{
   min-width: 150px;
 }
 
-#mobileOrderIcon {
+#mobile-order-icon {
   display: none;
 }
-.menuItem {
+.menu-item {
   margin: 10px;
   padding: 10px;
   height: 200px;
@@ -170,19 +170,19 @@ a.active{
     1px 2px #111,
     4px 8px #111; /* Makes shadow look extended */
 }
-.menuItem > p.cat {
+.menu-item > p.cat {
   display: none;
 }
-.menuItem > p {
+.menu-item > p {
   margin: 7px 0px;
 }
-.menuItem > img {
+.menu-item > img {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
   border-radius: 4px;
 }
-.orderButton {
+.order-button {
   width: 100%;
 }
 
@@ -204,12 +204,12 @@ a.active{
     margin-right: 7px;
   }
 
-  #subheader h2, #vertSpacer{
+  #subheader h2, #vert-spacer{
     display: none;
     /* font-size: 90%; */
   }
 
-  #mobileOrderIcon {
+  #mobile-order-icon {
     display: block;
     height: 31px;
     border: solid black 1px;
@@ -218,7 +218,7 @@ a.active{
     float:right;
     margin-right: 20px;
   }
-  #mobileOrderIcon > img {
+  #mobile-order-icon > img {
     height: 100%;
   }
 
