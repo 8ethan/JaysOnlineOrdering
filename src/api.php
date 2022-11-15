@@ -35,7 +35,7 @@ function get_all_items(){
     $stmt = $pdo->prepare("SELECT * FROM menu");
     //$stmt->execute([':available' => 1]);
     $stmt->execute();
-    $resp = $stmt->fetchall();
+    $resp = $stmt->fetchall(PDO::FETCH_ASSOC);
 
     foreach ($resp as $item) {
         $item_arr = array();
