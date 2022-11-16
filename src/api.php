@@ -23,9 +23,20 @@ if (isset($_GET["item"])) {
     }
 
 
+} else if(isset($_GET["search"])){
+
+    $search = $_GET["search"];
+    $data = get_all_items();
+
+    //print_r($data[1][0]);
+    $result = filterItems($data, $search);
+    header("Content-Type: application/json");
+    echo json_encode($result);
+
 } else {
-    output_error("You need to pass in a parameter, item, for this API.");
+    output_error("You need to pass in a parameter, item or search, for this API.");
 }
+
 
 
 function get_all_items(){
@@ -33,7 +44,6 @@ function get_all_items(){
     $data = array();
     $pdo = connect_to_db();
     $stmt = $pdo->prepare("SELECT * FROM menu");
-    //$stmt->execute([':available' => 1]);
     $stmt->execute();
     $resp = $stmt->fetchall(PDO::FETCH_ASSOC);
 
@@ -43,6 +53,18 @@ function get_all_items(){
         $data[$item["itemID"]] = $item_arr;
     }
     return $data;
+}
+
+function filterItems($data, $search){
+    $search = strtolower($search);
+    $filtered = array();
+    foreach ($data as $item){
+        //print_r(array_keys($item));
+        if (str_contains(strtolower($item[0]['itemName']), $search) ){
+            array_push($filtered, $item);
+        }
+    }
+    return $filtered;
 }
 
 
