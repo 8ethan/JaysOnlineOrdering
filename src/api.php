@@ -61,7 +61,7 @@ function filterItems($data, $search){
     foreach ($data as $item){
         //print_r(array_keys($item));
         if (str_contains(strtolower($item[0]['itemName']), $search) ){
-            array_push($filtered, $item);
+            $filtered[$item[0]['itemID']] = $item;
         }
     }
     return $filtered;
