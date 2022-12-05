@@ -1,0 +1,232 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:'Verdana';
+  }
+  h1{
+    text-align: center;
+  }
+h1,h2,h3 {
+    margin: 0px;
+}
+header {
+    position: relative;
+    
+    height: 60px;
+    padding: 0px 10px;
+
+    background-color: #004B98;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: solid rgba(0, 0, 0, 0.3) 3px;
+}
+header > div {
+    position: relative;
+
+    width: 30px;
+    height: 30px;
+
+    border: solid white 2px;
+    border-radius: 50%;
+}
+header > div:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+header > div:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#navButton {
+    background-image: url('../../img/menu-icon.png');
+    background-size: cover;
+    order: -1;
+}
+#profileButton {
+        background-image: url('../../img/white-user-invert.png');
+        background-size: cover;
+}
+nav {
+    position: absolute;
+    top: calc(100% - 6px);
+
+    background-color: #5c5c5c;
+    border: solid rgba(0, 0, 0, 0.4) 2px;
+    border-radius: 5px;
+
+    padding: 7px;
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    display: none;
+}
+nav > a {
+    color: white;
+}
+#profileNav {
+    right: 10px;
+}
+form {
+    height: 50px;
+    padding: 0px 10px;
+
+    background-color: lightgray;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+
+    border-bottom: solid rgba(0, 0, 0, 0.3) 2px;
+}
+#menuContainer {
+    padding: 10px;
+}
+#orderButton {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+    width: 80px;
+    height: 80px;
+
+    border: solid rgba(0, 0, 0, 0.3) 2px;
+    border-radius: 50%;
+
+    background-color: #5594DE;
+    background-image: url('../../img/bag-icon.png');
+    background-size: cover;
+}
+#orderButton:hover {
+    cursor: pointer;
+    filter: brightness(94%);
+}
+#orderButton:active {
+    filter: brightness(88%);
+}
+#orderBadge {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    right: -3px;
+
+    width: 1.5em;
+    height: 1.5em;
+    
+    background-color: #ff5858;
+
+    border: solid rgba(0, 0, 0, 0.3) 2px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MENU */
+#menuContainer {
+    padding: 0;
+    padding-top: 10px;
+
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    row-gap: 7px;
+}
+.menuItem {
+    position: relative;
+
+    /* margin: 5px; */
+    padding: 10px;
+    height: 170px;
+    width: 162px;
+    /* max-width: calc(50vw - 30px); */
+    /* 
+    background-color: #818181; */
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    gap: 7px;
+
+    justify-self: center;
+
+    background: lightgray;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+    font-size: smaller;
+    font-weight: bold;
+
+    position: relative;
+}
+.menuItem > img {
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 4px;
+  
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+.menuItem > p {
+    margin: 0px;
+}
+.menuItem > button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+
+    background-color: #5594DE;
+    background-image: url('../../img/bag-icon.png');
+    background-size: cover;
+    
+    opacity: 0%;
+
+    transition: opacity .1s, translate .15s;
+}
+.menuItem:hover > button {
+    opacity: 100%;
+    translate: 0px -3px;
+}
+.menuItem > button:hover {
+    cursor: pointer;
+    filter: brightness(94%);
+}
+.menuItem > button:active {
+    filter: brightness(88%);
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: larger;
+    }
+    h2 {
+        display: none;
+        font-size: smaller;
+    }
+    form {/* 
+        justify-content: space-between; */
+        gap: 5px;
+    }
+}
