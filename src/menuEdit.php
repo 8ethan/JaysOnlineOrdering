@@ -37,8 +37,8 @@ function updateItem(){
     WHERE itemID=:item_id";
     $stmt = $db->prepare($sql);
     $stmt->execute(array('item_name'=>$_POST['itemName'], 'cat'=>$_POST['category'], 'price'=>$_POST['price'],
-    'desc'=>$_POST['desc'], 'cal'=>$_POST['calories'], 'isAvail'=>$_POST['isAvailable'], 'dir'=>$_POST['dir']),
-    'item_id'=>$_POST['editID']);
+    'desc'=>$_POST['desc'], 'cal'=>$_POST['calories'], 'isAvail'=>$_POST['isAvailable'], 'dir'=>$_POST['dir'],
+    'item_id'=>$_POST['editID']));
 }
 
 function deleteItem(){
