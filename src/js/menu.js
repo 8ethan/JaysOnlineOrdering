@@ -6,6 +6,8 @@
     let menuContainer;
     let searchForm;
 
+    let selectedItem;
+
     window.addEventListener('load',init);
 
     function init() {
@@ -58,10 +60,45 @@
     }
 
     function orderItem(e) {
-        if (!e.target.classList.contains('orderButton')) return;
+        if (selectedItem) {
+            selectedItem.classList.remove('active');
+            selectedItem = null;
+        }
 
-        e.target.style
+         if (e.target.classList.contains('orderButton')) {
+            let item = e.target;
+    
+            // Item has not been ordered yet, highlight item and add to order
+            if (!item.classList.contains('orderedItem')) {
+                item.classList.add('orderedItem');
+    
+            // Item has already been ordered, highlight item and remove from order
+            } else {
+                item.classList.remove('orderedItem');
+                console.log(item);
+            }
 
+        } else {
+            let item;
+            if (e.target.classList.contains('menuItem')) {
+                item = e.target;
+            } else if (e.target.parentElement.classList.contains('menuItem')) {
+                item = e.target.parentElement;
+            }
+
+            if (item) {
+                // For mobile: Item has not been selected yet, highlight item and show order button
+                if (!item.classList.contains('active')) {
+                    item.classList.add('active');
+                    selectedItem = item;
+                // Item has already been selected, unhighlight item and hide order button
+                } else {
+                    item.classList.remove('active');
+                    console.log(item);
+                }
+            }
+
+        }
     }
 
 })();

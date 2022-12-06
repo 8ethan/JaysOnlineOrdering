@@ -31,8 +31,10 @@
                     <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
                 </div>
             </div>
-            <div id="orderButton" class="pushButton">
-                <div id="orderBadge">
+            <footer>
+            </footer>
+            <div id="checkoutButton" class="pushButton">
+                <div id="checkoutBadge">
                     <span>5</span>
                 </div>
             </div>
