@@ -23,15 +23,15 @@
                 <div class="menuItem">
                     <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
                     <p class="item-name">Buffalo Chicken Quesadilla<br>$5</p>
-                    <button type="button" class="orderButton"> <!-- Add to Order --> </button>
+                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
                 </div>
                 <div class="menuItem">
                     <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
                     <p class="item-name">Chicken Tenders<br>$5</p>
-                    <button type="button" class="orderButton"> <!-- Add to Order --> </button>
+                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
                 </div>
             </div>
-            <div id="orderButton">
+            <div id="orderButton" class="pushButton">
                 <div id="orderBadge">
                     <span>5</span>
                 </div>

@@ -8,9 +8,9 @@
         <a href="#">Menu</a>
         <a href="#">Admin</a>
     </nav>
-    <div id="navButton">
+    <div id="navButton" class='pushButton'>
     </div>
-    <div id="profileButton">
+    <div id="profileButton" class='pushButton'>
     </div>
     <nav id="profileNav">
         <h2>your name here</h2>

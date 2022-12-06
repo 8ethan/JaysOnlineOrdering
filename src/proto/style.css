@@ -11,6 +11,7 @@ h1,h2,h3 {
     margin: 0px;
 }
 header {
+
     position: relative;
     
     height: 60px;
@@ -32,15 +33,9 @@ header > div {
     width: 30px;
     height: 30px;
 
+    background-color: #004B98;
     border: solid white 2px;
     border-radius: 50%;
-}
-header > div:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.15);
-}
-header > div:active {
-    background-color: rgba(0, 0, 0, 0.3);
 }
 #navButton {
     background-image: url('../../img/menu-icon.png');
@@ -106,13 +101,6 @@ form {
     background-color: #5594DE;
     background-image: url('../../img/bag-icon.png');
     background-size: cover;
-}
-#orderButton:hover {
-    cursor: pointer;
-    filter: brightness(94%);
-}
-#orderButton:active {
-    filter: brightness(88%);
 }
 #orderBadge {
     content: "";
@@ -197,7 +185,7 @@ form {
 
     border: solid rgba(0, 0, 0, 0.5) 1px;
 
-    background-color: #5594DE;
+    background-color: #61abff;
     background-image: url('../../img/bag-icon.png');
     background-size: cover;
     
@@ -209,12 +197,13 @@ form {
     opacity: 100%;
     translate: 0px -3px;
 }
-.menuItem > button:hover {
+
+.pushButton:hover {
     cursor: pointer;
-    filter: brightness(94%);
+    filter: brightness(92%);
 }
-.menuItem > button:active {
-    filter: brightness(88%);
+.pushButton:active {
+    filter: brightness(80%);
 }
 
 @media screen and (max-width: 500px) {
