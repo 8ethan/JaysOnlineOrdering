@@ -2,7 +2,7 @@
     <h1>
         Jay's Nest Online Ordering
     </h1>
-    <nav>
+    <nav id="nav" class='hidden'>
         <h2>Navigation</h2>
         <a href="#">Help & Info</a>
         <a href="#">Menu</a>
@@ -12,7 +12,7 @@
     </div>
     <div id="profileButton" class='pushButton'>
     </div>
-    <nav id="profileNav">
+    <nav id="profileNav" class='hidden'>
         <h2>your name here</h2>
         <a href="#">Profile</a>
         <a href="#">Order History</a>
