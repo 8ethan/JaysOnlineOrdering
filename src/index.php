@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="../img/White_E_Logo.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jays Online Ordering</title>
-    <script src="scripts.js"></script>
-</head>
-
-<body>
-
-    <?PHP
-    require('header.php');
-    
-    require("functions/database_functions.php");
-    require("functions/menuFunctions.php");
-    require("functions/config.php");
-    ?>
-
-    <div class="main">
-        <!--Display something if user is not logged in-->
-        <!-- <h2>Please log in to order.</h2> -->
-
-        <!-- Display menu if signed in -->
-        <?php
-        require('navbar.php');
+    <head>
+        <?php 
+            require('head.php');
         ?>
-        <div id='menu'>
-            <div id='subheader'>
-                <h2>Menu</h2>
-                <div id='vert-spacer'></div>
-                <?php
-                    require('filters.php');
-                ?>
-                <div id='mobile-order-icon'>
-                    <img src="../img/bag-icon.png">
+        <title>Jays Online Ordering</title>
+        <script src="js/menu.js"></script>
+    </head>
+    <body>
+        <?php 
+            require('header.php');
+        ?>
+        <main>
+            <div id='searchForm' onsubmit="return false">
+                <h2>Search</h2>
+                <select id='categorySelect'>
+                    <option value=''>Select a category...</option>
+                </select>
+                <input id='textSearch' type="text" placeholder="Search for an item...">
+            </div>
+            <div id="menuContainer">
+                <div class="menuItem">
+                    <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
+                    <p class="item-name">Buffalo Chicken Quesadilla<br>$5</p>
+                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
+                </div>
+                <div class="menuItem">
+                    <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
+                    <p class="itemName">Chicken Tenders<br>$5</p>
+                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
                 </div>
             </div>
-            <?php
-            require('menu.php');
-            ?>
-        </div>
-    </div>
+            <div id="orderButton" class="pushButton">
+                <div id="orderBadge">
+                    <span>5</span>
+                </div>
+            </div>
+        </main>
 
-</body>
-
+    </body>
 </html>

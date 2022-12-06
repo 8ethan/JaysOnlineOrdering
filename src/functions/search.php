@@ -10,7 +10,7 @@ if (isset($_GET['name']))
     $str = $_GET['name'];
 
 // Include category if given
-if (isset($_GET['category'])) {
+if (isset($_GET['category']) && $_GET['category']) {
     $pdo = connect_to_db();
     $stmt = $pdo->prepare("SELECT * FROM menu WHERE category=:cat AND itemName LIKE CONCAT('%', :name, '%')");
     $stmt->execute([

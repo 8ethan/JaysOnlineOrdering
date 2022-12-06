@@ -15,7 +15,8 @@
         profileNav = document.getElementById('profileNav');
 
         window.addEventListener('click',(e) => {
-            console.log(e.target==navButton);
+            //console.log(e.target==navButton);
+            
             if (e.target==navButton) {
                 if (nav.classList.contains('hidden'))
                     nav.classList.remove('hidden');
