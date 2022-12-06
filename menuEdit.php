@@ -22,7 +22,7 @@ function createItem(){
     'desc'=>$_POST['desc'], 'cal'=>$_POST['calories'], 'isAvail'=>$_POST['isAvailable'], 'dir'=>$_POST['dir']));
 }
 
-function deleteRoom(){
+function deleteItem(){
     $db = connect_to_db();
     $sql = "DELETE FROM menu WHERE itemID = :item_id";
     $stmt = $db->prepare($sql);
