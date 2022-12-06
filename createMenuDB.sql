@@ -2,9 +2,9 @@ CREATE SCHEMA IF NOT EXISTS `jaysdb` DEFAULT CHARACTER SET utf8 ;
 USE `jaysdb`;
 
 CREATE TABLE IF NOT EXISTS `jaysdb`.`menu` (`itemID` INT NOT NULL AUTO_INCREMENT,
-`itemName` VARCHAR(45) NOT NULL,`category` VARCHAR(45) NULL,
-`price` DOUBLE NULL, `description` VARCHAR(200) NULL,
-`calories` INTEGER NULL, `isAvailable` BOOLEAN NULL DEFAULT 1, `imgDir` VARCHAR(200) NULL DEFAULT NULL,
+`itemName` VARCHAR(45) NOT NULL,`category` VARCHAR(45) NULL DEFAULT NULL,
+`price` DOUBLE NULL DEFAULT NULL, `description` VARCHAR(200) NULL DEFAULT NULL,
+`calories` INTEGER NULL DEFAULT NULL, `isAvailable` BOOLEAN NULL DEFAULT 1, `imgDir` VARCHAR(200) NULL DEFAULT NULL,
 PRIMARY KEY(`itemID`));
 
 INSERT INTO menu (itemID,itemName,category,price,description,calories,isAvailable)
