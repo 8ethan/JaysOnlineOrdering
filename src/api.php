@@ -21,14 +21,22 @@ if (isset($_GET["item"])) {
     else if ($item != "all") {
         output_error("Food item not found in database.");
     }
-
-
+else if(isset($_GET["category"])){
+    $cat = $_GET["category"];
+    $data = get_all_cats();
+    if ($cat == "all") {    
+        header("Content-Type: application/json");
+        echo json_encode($data);
+    }
+    else{
+        echo "Specific categories not yet supported";
+    }
+}
 } else if(isset($_GET["search"])){
 
     $search = $_GET["search"];
     $data = get_all_items();
 
-    //print_r($data[1][0]);
     $result = filterItems($data, $search);
     header("Content-Type: application/json");
     echo json_encode($result);
@@ -36,7 +44,6 @@ if (isset($_GET["item"])) {
 } else {
     output_error("You need to pass in a parameter, item or search, for this API.");
 }
-
 
 
 function get_all_items(){
@@ -51,6 +58,19 @@ function get_all_items(){
         $item_arr = array();
         array_push($item_arr, $item);
         $data[$item["itemID"]] = $item_arr;
+    }
+    return $data;
+}
+
+function get_all_cats(){
+    $data = array();
+    $pdo = connect_to_db();
+    $stmt = $pdo->prepare("SELECT DISTINCT category FROM menu");
+    $stmt->execute();
+    $resp = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    foreach ($resp as $item) {
+        array_push($data, $item);
     }
     return $data;
 }
