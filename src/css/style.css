@@ -241,6 +241,32 @@ footer {
     display: none;
 }
 
+#editTable {
+    width:50%;
+    border: 1px solid;
+    border-spacing: 0;
+}
+
+#editTable th {
+    border-bottom: 1px solid;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+#editTable tr:hover:not(#editHeader) {
+    background-color: #8be675;
+}
+
+#editTable tr:nth-child(even) {
+    background-color: #9fbef4c6;
+}
+
+#editHeader{
+    background-color: #004B98;
+    color: white;
+}
 
 
 @media screen and (max-width: 500px) {

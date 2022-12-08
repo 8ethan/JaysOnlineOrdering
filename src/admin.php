@@ -5,7 +5,7 @@
             require('head.php');
         ?>
         <title>Jays Online Ordering</title>
-        <script src="js/menu.js"></script>
+        <script src="js/admin.js"></script>
     </head>
     <body>
         <?php 
@@ -19,17 +19,14 @@
                 </select>
                 <input id='textSearch' type="text" placeholder="Search for an item...">
             </div>
-            <div id="menuContainer">
-                <div class="menuItem">
-                    <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
-                    <p class="item-name">Buffalo Chicken Quesadilla<br>$5</p>
-                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
-                </div>
-                <div class="menuItem">
-                    <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
-                    <p class="itemName">Chicken Tenders<br>$5</p>
-                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
-                </div>
+            <div id="editContainer">
+                <table id="editTable">
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                    </tr>
+                </table>
             </div>
             <footer>
             </footer>
