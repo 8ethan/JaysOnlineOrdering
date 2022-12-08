@@ -268,6 +268,20 @@ footer {
     color: white;
 }
 
+#editContainer {
+    display: flex;
+}
+
+#editForm {
+    margin-left:20px;
+}
+
+#editImage{
+    width: 200px;
+    margin:0;
+    padding:0;
+    border: 2px solid;
+}
 
 @media screen and (max-width: 500px) {
     h1 {

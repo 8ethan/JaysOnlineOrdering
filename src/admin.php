@@ -27,6 +27,20 @@
                         <th>Price</th>
                     </tr>
                 </table>
+                <form id="editForm">
+                    <p>Item ID: </p>
+                    <label for="itemName">Item Name:</label><br>
+                    <input type="text" name="itemName"><br>
+                    <label for="category">Category:</label><br>
+                    <input type="text" name="category"><br>
+                    <label for="price">Price:</label><br>
+                    <input type="number" name="price"><br>
+                    <label for="available">Availability:</label>
+                    <input type="checkbox" name="available"><br>
+                    <p>Current Image:</p>
+                    <img id="editImage" src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'><br>
+                    <input type="submit" value="Save Changes">
+                </form>
             </div>
             <footer>
             </footer>

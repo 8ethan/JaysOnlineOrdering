@@ -5,7 +5,7 @@
     <nav id="nav" class='hidden'>
         <h2>Navigation</h2>
         <a href="#">Help & Info</a>
-        <a href="#">Menu</a>
+        <a href="index.php">Menu</a>
         <a href="admin.php">Admin</a>
     </nav>
     <div id="navButton" class='pushButton'>
