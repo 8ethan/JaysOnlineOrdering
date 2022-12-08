@@ -72,6 +72,8 @@
             `;
             menuContainer.innerHTML += card;
         });
+
+        menuContainer.innerHTML += '<div class="gridRow"></div>'
     }
 
     function focusItem(item) {
