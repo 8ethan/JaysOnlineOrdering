@@ -5,6 +5,8 @@
     let searchBox;
     let menuContainer;
     let searchForm;
+    let checkoutButton;
+    let checkoutBadge;
 
     let selectedItem;
 
@@ -15,21 +17,34 @@
         searchBox = document.getElementById('textSearch');
         menuContainer = document.getElementById('menuContainer');
         searchForm = document.getElementById('searchForm');
+        checkoutButton = document.getElementById('checkoutButton');
+        checkoutBadge = document.getElementById('checkoutBadge');
 
         // populate categories
-        let url = "./functions/search.php";
-        fetch(url)
-        .then((response) => response.json())
-        .then((r) => {
-          console.log(r);
-          updateMenu(r);
-        });
+        populateCategories();
+        
+        // populate all foods by default
+        search();
 
         categories.addEventListener("change", search);
         searchBox.addEventListener("input", search);
         searchBox.addEventListener("propertychange", search);
 
         document.addEventListener('click',orderItem);
+    }
+
+    function populateCategories () {
+        let url = "api.php?category=all";
+        
+        fetch(url)
+        .then((response) => response.json())
+        .then((cats) => {
+            cats.forEach(category => {
+                categories.innerHTML+=`
+                <option>${category.category}</option>
+                `;
+            });
+        });
     }
 
     function search() {
@@ -78,6 +93,7 @@
                 console.log(item);
             }
 
+        // For mobile: If food card was clicked, highlight card
         } else {
             let item;
             if (e.target.classList.contains('menuItem')) {
@@ -87,7 +103,7 @@
             }
 
             if (item) {
-                // For mobile: Item has not been selected yet, highlight item and show order button
+                // Item has not been selected yet, highlight item and show order button
                 if (!item.classList.contains('active')) {
                     item.classList.add('active');
                     selectedItem = item;

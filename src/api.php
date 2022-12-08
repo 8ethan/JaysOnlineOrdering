@@ -21,6 +21,7 @@ if (isset($_GET["item"])) {
     else if ($item != "all") {
         output_error("Food item not found in database.");
     }
+}
 else if(isset($_GET["category"])){
     $cat = $_GET["category"];
     $data = get_all_cats();
@@ -31,7 +32,6 @@ else if(isset($_GET["category"])){
     else{
         echo "Specific categories not yet supported";
     }
-}
 } else if(isset($_GET["search"])){
 
     $search = $_GET["search"];
@@ -93,5 +93,3 @@ function output_error($msg) {
     header("Content-type: text/plain");
     echo $msg;
 }
-
-?>
