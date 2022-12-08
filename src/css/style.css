@@ -282,17 +282,27 @@ nav > a {
     margin-top:5px;
 }
 
-#editForm {
+#editFormContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#editFormContainer #itemImage{
+    margin-left: 10;
+}
+
+#editForm, #addForm {
     margin-left:20px;
 }
 
-#editForm input {
+#editForm input, #addForm input {
     margin-top:5px;
     margin-bottom:5px;
 }
 
 #editImage{
     width: 200px;
+    height: 200px;
     margin:0;
     padding:0;
     border: 2px solid;
