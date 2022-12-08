@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jays Online Ordering</title>
-    <script src="scripts.js"></script>
-</head>
-
-<body>
-
-    <?PHP
-    require('header.php');
-    require("functions/database_functions.php");
-    //require("functions/menuFunctions.php");
-    require("functions/config.php");
-    ?>
-
-    <div class="main">
-        <!--Display something if user is not logged in-->
-        <!-- <h2>Please log in to order.</h2> -->
-
-        <!-- Display menu if signed in -->
-        <?php
-        require('navbar.php');
+    <head>
+        <?php 
+            require('head.php');
         ?>
-        
-    </div>
+        <title>Jays Online Ordering</title>
+        <script src="js/menu.js"></script>
+    </head>
+    <body>
+        <?php 
+            require('header.php');
+        ?>
+        <main>
+            <div id='searchForm' onsubmit="return false">
+                <h2>Search</h2>
+                <select id='categorySelect'>
+                    <option value=''>Select a category...</option>
+                </select>
+                <input id='textSearch' type="text" placeholder="Search for an item...">
+            </div>
+            <div id="menuContainer">
+                <div class="menuItem">
+                    <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
+                    <p class="item-name">Buffalo Chicken Quesadilla<br>$5</p>
+                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
+                </div>
+                <div class="menuItem">
+                    <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
+                    <p class="itemName">Chicken Tenders<br>$5</p>
+                    <button type="button" class="orderButton pushButton"> <!-- Add to Order --> </button>
+                </div>
+            </div>
+            <footer>
+            </footer>
+            <div id="checkoutButton" class="pushButton">
+                <div id="checkoutBadge">
+                    <span>5</span>
+                </div>
+            </div>
+        </main>
 
-</body>
-
+    </body>
 </html>

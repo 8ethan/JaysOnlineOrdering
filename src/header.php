@@ -6,7 +6,7 @@
         <h2>Navigation</h2>
         <a href="#">Help & Info</a>
         <a href="#">Menu</a>
-        <a href="#">Admin</a>
+        <a href="admin.php">Admin</a>
     </nav>
     <div id="navButton" class='pushButton'>
     </div>
