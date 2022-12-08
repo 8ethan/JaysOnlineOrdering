@@ -38,12 +38,12 @@ header > div {
     border-radius: 50%;
 }
 #navButton {
-    background-image: url('../../img/menu-icon.png');
+    background-image: url('../img/menu-icon.png');
     background-size: cover;
     order: -1;
 }
 #profileButton {
-        background-image: url('../../img/white-user-invert.png');
+        background-image: url('../img/white-user-invert.png');
         background-size: cover;
 }
 nav {
@@ -109,7 +109,7 @@ nav > a {
     border-radius: 50%;
 
     background-color: #5594DE;
-    background-image: url('../../img/bag-icon.png');
+    background-image: url('../img/bag-icon.png');
     background-size: cover;
 }
 #checkoutBadge {
@@ -211,7 +211,7 @@ nav > a {
     border: solid rgba(0, 0, 0, 0.5) 1px;
 
     background-color: #61abff;
-    background-image: url('../../img/bag-icon.png');
+    background-image: url('../img/bag-icon.png');
     background-size: cover;
     box-shadow: none;
     

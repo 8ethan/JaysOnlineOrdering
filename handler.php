@@ -6,17 +6,17 @@ switch(@parse_url($_SERVER['REQUEST_URI'])['path']){
     case '/index':
     case '/index.html':
     case '/menu':
-        require 'src/index.php';
+        require 'index.php';
         break;
 
     case '/admin.php':
     case '/admin':
-        require 'src/admin.php';
+        require 'admin.php';
         break;
 
     case '/order':
     case '/order.php':
-        require 'src/order.php';
+        require 'order.php';
         break;
 
     default:
