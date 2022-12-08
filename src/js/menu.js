@@ -74,24 +74,33 @@
         });
     }
 
-    function orderItem(e) {
+    function focusItem(item) {
         if (selectedItem) {
             selectedItem.classList.remove('active');
-            selectedItem = null;
         }
 
+        item.classList.add('active');
+        selectedItem = item;
+    }
+    function unfocusItem(item) {
+        item.classList.remove('active');
+        selectedItem = null;
+    }
+
+    function orderItem(e) {
+
          if (e.target.classList.contains('orderButton')) {
-            let item = e.target;
+            let itemButton = e.target;
     
             // Item has not been ordered yet, highlight item and add to order
-            if (!item.classList.contains('orderedItem')) {
-                item.classList.add('orderedItem');
+            if (!itemButton.classList.contains('orderedItem')) {
+                itemButton.classList.add('orderedItem');
     
             // Item has already been ordered, highlight item and remove from order
             } else {
-                item.classList.remove('orderedItem');
-                console.log(item);
+                itemButton.classList.remove('orderedItem');
             }
+            unfocusItem(itemButton.parentElement);
 
         // For mobile: If food card was clicked, highlight card
         } else {
@@ -105,12 +114,10 @@
             if (item) {
                 // Item has not been selected yet, highlight item and show order button
                 if (!item.classList.contains('active')) {
-                    item.classList.add('active');
-                    selectedItem = item;
+                    focusItem(item);
                 // Item has already been selected, unhighlight item and hide order button
                 } else {
-                    item.classList.remove('active');
-                    console.log(item);
+                    unfocusItem(item);
                 }
             }
 

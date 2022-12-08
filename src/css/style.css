@@ -3,10 +3,10 @@ html, body {
     margin: 0;
     padding: 0;
     font-family:'Verdana';
-  }
-  h1{
-    text-align: center;
-  }
+}
+h1 {
+text-align: center;
+}
 h1,h2,h3 {
     margin: 0px;
 }
@@ -86,9 +86,10 @@ nav > a {
 }
 #menuContainer {
     padding: 10px;
+    height: calc(100vh - 125px);
 }
 
-footer {
+#whiteGradient {
     /* pointer-events: none; */
     position: fixed;
     bottom: 0px;
