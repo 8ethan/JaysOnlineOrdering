@@ -259,6 +259,10 @@ footer {
     background-color: #8be675;
 }
 
+#editTable tr:active:not(#editHeader) {
+    background-color: #dbe675;
+}
+
 #editTable tr:nth-child(even) {
     background-color: #9fbef4c6;
 }
@@ -272,8 +276,18 @@ footer {
     display: flex;
 }
 
+#modPanel {
+    margin-left:10px;
+    margin-top:5px;
+}
+
 #editForm {
     margin-left:20px;
+}
+
+#editForm input {
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 #editImage{
