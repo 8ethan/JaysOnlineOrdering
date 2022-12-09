@@ -61,6 +61,8 @@
 
     function updateMenu(foodItems) {
 
+        menuContainer.innerHTML = "";
+
         foodItems.forEach(item => {
             let available = "";
             if (!item.isAvailable) {
