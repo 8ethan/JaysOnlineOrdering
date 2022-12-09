@@ -96,7 +96,9 @@
             `
             innerHTML += card;
         });
+
         currentTable = foodItems;
+        
         editTable.innerHTML = innerHTML;
     }
 
