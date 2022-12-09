@@ -1,5 +1,5 @@
 <?php
-$databasehost = '34.132.211.74';
+$databasehost = getenv('INSTANCE_UNIX_SOCKET');
 $database = getenv('CLOUDSQL_DB');
 $databaseuser = getenv('CLOUDSQL_USER');
 $databasepassword = getenv('CLOUDSQL_PASSWORD');
