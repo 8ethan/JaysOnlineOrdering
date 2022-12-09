@@ -50,7 +50,7 @@ function get_all_items(){
 
     $data = array();
     $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT * FROM menu");
+    $stmt = $pdo->prepare("SELECT * FROM menuItem");
     $stmt->execute();
     $resp = $stmt->fetchall(PDO::FETCH_ASSOC);
 
@@ -65,7 +65,7 @@ function get_all_items(){
 function get_all_cats(){
     $data = array();
     $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT DISTINCT category FROM menu");
+    $stmt = $pdo->prepare("SELECT DISTINCT category FROM menuItem");
     $stmt->execute();
     $resp = $stmt->fetchall(PDO::FETCH_ASSOC);
 

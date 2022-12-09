@@ -12,7 +12,7 @@ if (isset($_GET['name']))
 // Include category if given
 if (isset($_GET['category']) && $_GET['category']) {
     $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT * FROM menu WHERE category=:cat AND itemName LIKE CONCAT('%', :name, '%')");
+    $stmt = $pdo->prepare("SELECT * FROM menuItem WHERE category=:cat AND itemName LIKE CONCAT('%', :name, '%')");
     $stmt->execute([
         ':cat' => $_GET['category'],
         ':name'=> $str
@@ -20,7 +20,7 @@ if (isset($_GET['category']) && $_GET['category']) {
     $data = $stmt->fetchall(PDO::FETCH_ASSOC);
 } else {
     $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT * FROM menu WHERE itemName LIKE CONCAT('%', :name, '%')");
+    $stmt = $pdo->prepare("SELECT * FROM menuItem WHERE itemName LIKE CONCAT('%', :name, '%')");
     $stmt->execute([
         ':name'=> $str
     ]); 

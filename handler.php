@@ -1,25 +1,17 @@
 <?php
 // ini_set('allow_url_fopen');
 
-switch(@parse_url($_SERVER['REQUEST_URI'])['path']){
+$path_to_require = substr(@parse_url($_SERVER['REQUEST_URI'])['path'], 1);
+switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
     case '/index':
     case '/index.html':
     case '/menu':
         require 'index.php';
         break;
-
-    case '/admin.php':
-    case '/admin':
-        require 'admin.php';
-        break;
-
-    case '/order':
-    case '/order.php':
-        require 'order.php';
-        break;
-
     default:
-        http_response_code(404);
+        if (is_readable($path_to_require) && !is_dir($path_to_require))
+            require($path_to_require);
+        else
+            http_response_code(404);
 }
-?>

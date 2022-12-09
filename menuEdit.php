@@ -23,7 +23,7 @@ else if(isset($_POST['deleteID'])){
 
 function createItem(){
     $db = connect_to_db();
-    $sql = "INSERT INTO menu (itemName, category, price, description, calories, isAvailable, imgDir) 
+    $sql = "INSERT INTO menuItem (itemName, category, price, description, calories, isAvailable, imgDir) 
     VALUES (:item_name, NULLIF(:cat, ''), :price, NULLIF(:desc, ''), NULLIF(:cal, ''), :isAvail, NULLIF(:dir, ''))";
     $stmt = $db->prepare($sql);
     $stmt->execute(array('item_name'=>$_POST['itemName'], 'cat'=>$_POST['category'], 'price'=>$_POST['price'],
@@ -32,7 +32,7 @@ function createItem(){
 
 function updateItem(){
     $db = connect_to_db();
-    $sql = "UPDATE menu SET itemName=:item_name, category=NULLIF(:cat, ''),
+    $sql = "UPDATE menuItem SET itemName=:item_name, category=NULLIF(:cat, ''),
     price=:price, description=NULLIF(:desc, ''), calories=NULLIF(:cal, ''), isAvailable=:isAvail, imgDir=NULLIF(:dir, '')
     WHERE itemID=:item_id";
     $stmt = $db->prepare($sql);
@@ -43,7 +43,7 @@ function updateItem(){
 
 function deleteItem(){
     $db = connect_to_db();
-    $sql = "DELETE FROM menu WHERE itemID = :item_id";
+    $sql = "DELETE FROM menuItem WHERE itemID = :item_id";
     $stmt = $db->prepare($sql);
     $stmt->execute(array('item_id'=>$_POST['deleteID']));
 }

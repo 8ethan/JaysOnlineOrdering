@@ -12,6 +12,7 @@
                 <h2>Search</h2>
                 <select id='categorySelect'>
                     <option value=''>Select a category...</option>
+                    <option value=''>All</option>
                 </select>
                 <input id='textSearch' type="text" placeholder="Search for an item...">
             </div>

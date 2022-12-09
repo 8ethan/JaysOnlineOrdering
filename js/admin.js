@@ -60,7 +60,8 @@
     }
 
     function updateMenu(foodItems) {
-        editTable.innerHTML = `
+        let innerHTML = '';
+        innerHTML = `
         <tr id="editHeader">
             <th>Item ID</th>
             <th>Item Name</th>
@@ -73,15 +74,17 @@
         foodItems.forEach(item => {
             let card = `
             <tr>
-                <th>${item.itemID}</th>
-                <th>${item.itemName}</th>
-                <th>${item.category}</th>
-                <th>${item.price}</th>
-                <th>${item.isAvailable}</th>
+                <td>${item.itemID}</td>
+                <td>${item.itemName}</td>
+                <td>${item.category}</td>
+                <td>${item.price}</td>
+                <td>${item.isAvailable}</td>
             </tr>
             `
-            editTable.innerHTML += card;
+            innerHTML += card;
         });
+
+        editTable.innerHTML = innerHTML;
     }
 
 

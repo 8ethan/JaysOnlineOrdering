@@ -249,12 +249,16 @@ nav > a {
 }
 
 #editTable {
+    display: block;
+    height: calc(100vh - 115px);
+    overflow-y: scroll;
+
     width:50%;
     border: 1px solid;
     border-spacing: 0;
 }
 
-#editTable th {
+#editTable td {
     border-bottom: 1px solid;
     padding-top: 5px;
     padding-bottom:5px;
