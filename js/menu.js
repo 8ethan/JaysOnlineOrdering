@@ -60,7 +60,6 @@
     }
 
     function updateMenu(foodItems) {
-        //menuContainer.innerHTML = 'pushButton';
 
         foodItems.forEach(item => {
             let available = "";

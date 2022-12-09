@@ -50,7 +50,7 @@
                                 <input type="submit" value="Save Changes">
                             </div>
                             <div id="itemImage">
-                                <img id="editImage"><br>
+                                <img id="editImage" src="https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg"><br>
                             </div>
                         </div>
                     </form>
