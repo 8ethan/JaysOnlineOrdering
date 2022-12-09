@@ -8,7 +8,7 @@ if (isset($_GET['ids'])) {
     $pdo = connect_to_db();
     $stmt = $pdo->prepare("SELECT name FROM menuItem WHERE itemID IN (:ids)");
     $stmt->execute([
-        ':ids' => implode(',',$_GET['ids'])
+        ':ids' => $_GET['ids']
     ]); 
     $data = $stmt->fetchall(PDO::FETCH_ASSOC);
 }
