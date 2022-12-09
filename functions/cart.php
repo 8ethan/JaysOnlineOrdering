@@ -1,32 +1,29 @@
 <?php
+session_start();
 
 require("database_functions.php");
 
 header('Content-Type: application/json; charset=utf-8');
 
+if(!isset($_POST['action'])) return;
 
+switch($_POST['action']) {
+    case 'add':
+        if(!isset($_SESSION['order']->items))
+            $_SESSION['order']->items = [];
+        array_push($_SESSION['order']->items, $_POST['item']);
+        break;
+    case 'remove':
+        array_pop($_SESSION['order']->items, $_POST['item']);
+        break;
+    case 'get':
+        break;
+    case 'clear':
 
-// Query with blank name if none specified
-$str = '';
-if (isset($_POST['name'])) 
-    $str = $_POST['name'];
-
-// Include category if given
-if (isset($_POST['category']) && $_POST['category']) {
-    $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT * FROM menuItem WHERE category=:cat AND itemName LIKE CONCAT('%', :name, '%')");
-    $stmt->execute([
-        ':cat' => $_POST['category'],
-        ':name'=> $str
-    ]); 
-    $data = $stmt->fetchall(PDO::FETCH_ASSOC);
-} else {
-    $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT * FROM menuItem WHERE itemName LIKE CONCAT('%', :name, '%')");
-    $stmt->execute([
-        ':name'=> $str
-    ]); 
-    $data = $stmt->fetchall(PDO::FETCH_ASSOC);
+        break;
+    // Only use SQL here.
+    case 'place':
+        break;
 }
 
 echo json_encode($data);

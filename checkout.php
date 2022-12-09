@@ -12,8 +12,9 @@
             <div id='searchForm'>
                 <h2>Checkout</h2>
             </div>
-            <section id='yourOrder'>
-                test
+            <section id='yourOrder'  class='basicBox'>
+                <h3>Your Order:</h3>
+                <table id='orderList' class="basicBox"></div>
             </section>
         </main>
     </body>
