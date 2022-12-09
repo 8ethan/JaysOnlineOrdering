@@ -29,7 +29,7 @@
                 </table>
                 <div id="modPanel">
                     <h2>Edit Item:</h2>
-                    <form id="editForm" action="/menuEdit.php">
+                    <form id="editForm" action="/menuEdit.php" method="POST">
                         <div id="editFormContainer">
                             <div>
                                 <p id=editID_label>Item ID: </p>
@@ -39,12 +39,12 @@
                                 <label for="category">Category:</label>
                                 <input type="text" id="editCat" name="category"><br>
                                 <label for="price">Price: $</label>
-                                <input type="number" id="editPrice" name="price"><br>
-                                <label for="available">Available:</label>
-                                <input type="checkbox" id="editAvail" name="available"><br>
-                                <input type="hidden" name="desc">
-                                <input type="hidden" name="calories">
-                                <input type="hidden" name="dir">
+                                <input type="number" step="0.01" id="editPrice" name="price"><br>
+                                <input type="hidden" name="desc" value="">
+                                <input type="hidden" name="calories" value="">
+                                <label for="isAvailable">Available:</label>
+                                <input type="number" id="editAvail" name="isAvailable"><br>
+                                <input type="hidden" name="dir" value="">
                                 <label for="img">New image:</label>
                                 <input type="file" name="img" id="editImg" accept="image/*"><br>
                                 <input type="submit" value="Save Changes">
@@ -56,15 +56,15 @@
                     </form>
                     <br>
                     <h2>Add New Item:</h2>
-                    <form id="addForm" action="/menuEdit.php">
+                    <form id="addForm" action="/menuEdit.php" method="POST">
                         <label for="itemName">Item Name: </label>
                         <input type="text" name="itemName"><br>
                         <label for="category">Category:</label>
                         <input type="text" name="category"><br>
                         <label for="price">Price: $</label>
                         <input type="number" name="price"><br>
-                        <label for="available">Available:</label>
-                        <input type="checkbox" name="available"><br>
+                        <label for="isAvailable">Available:</label>
+                        <input type="number" name="isAvailable"><br>
                         <label for="img">Upload image:</label>
                         <input type="file" name="img" accept="image/*"><br>
                         <input type="hidden" name="desc">

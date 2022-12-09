@@ -1,5 +1,5 @@
 <?php
-
+header('location: https://jays-nest-online-ordering.ue.r.appspot.com/admin.php');
 require("functions/database_functions.php");
 require("functions/config.php");
 
@@ -19,6 +19,7 @@ else if(isset($_POST['deleteID'])){
     deleteItem();
 } else {
     echo "Please provide the correct POST paramters.";
+    exit();
 }
 
 function createItem(){

@@ -54,7 +54,7 @@
         fetch(url)
         .then((response) => response.json())
         .then((r) => {
-          console.log(r);
+          //console.log(r);
           updateMenu(r);
         });
     }
@@ -110,30 +110,18 @@
 
         // Scuffed
         let rowClicked = Array.prototype.indexOf.call(e.target.parentElement.parentElement.children,e.target.parentElement)-1;
-        console.log(rowClicked);
+        //console.log(rowClicked);
 
         let item = currentTable[rowClicked];
-        console.log(Object.entries(item));
+        //console.log(Object.entries(item));
 
         editID_label.innerHTML = "Item ID: "+item.itemID;
         editID.value = item.itemID;
         editName.value = item.itemName;
         editCat.value = item.category;
         editPrice.value = item.price;
-        if (item.isAvailable==1){
-            editAvail.checked=true;
-        }
-        else {
-            editAvail.checked=false;
-        }
-
-        // Object.entries(item).slice(1).forEach(attr =>{
-        //     nrHTML += `
-        //     <div class="form-row">
-        //         <label for="${attr[0]}">${attr[0]}</label>
-        //         <input type="text" id="${attr[0]}" name="${attr[0]}" value="${attr[1]}">
-        //     </div>`;
-        // })
+        editAvail.value = item.isAvailable;
+        editImg.src = 'https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg';
 
     }
 
