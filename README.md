@@ -11,6 +11,7 @@ Local website hosting:
 Since we had to configure our database information to work on google cloud, the configurations for local hosting will not work. In order to modify the code to work on a local computer the user must go to the functions/config file and input the information to connect to their own local SQL server. The user will also have to go into functions/database_functions and uncomment line 7, and comment out line 8. After the databases are imported and these configurations are changed, the user can now host the website locally.
 
 API documentation:
+
 https://jays-nest-online-ordering.ue.r.appspot.com/api.php?search=
 Request Type: GET
 Description: Returns foods from the database with the name containing the search term. and empty search string will return all items.
