@@ -96,18 +96,17 @@
             `
             innerHTML += card;
         });
-        //currentTable = JSON.parse(JSON.stringify(innerHTML));
-        //console.log(currentTable);
+        currentTable = foodItems;
         editTable.innerHTML = innerHTML;
     }
 
     function selectItem (e) {
-
+        console.log(currentTable);
         if (e.target.tagName!='TD')
             return;
 
         // Scuffed
-        let rowClicked = Array.prototype.indexOf.call(e.target.parentElement.parentElement.children,e.target.parentElement)-2;
+        let rowClicked = Array.prototype.indexOf.call(e.target.parentElement.parentElement.children,e.target.parentElement)-1;
         console.log(rowClicked);
 
         let item = currentTable[rowClicked];
