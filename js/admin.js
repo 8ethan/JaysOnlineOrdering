@@ -95,11 +95,9 @@
             </tr>
             `
             innerHTML += card;
-
-            currentTable = JSON.parse(JSON.stringify(innerHTML));
-            console.log(currentTable);
         });
-
+        //currentTable = JSON.parse(JSON.stringify(innerHTML));
+        //console.log(currentTable);
         editTable.innerHTML = innerHTML;
     }
 
