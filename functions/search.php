@@ -5,8 +5,9 @@ require("database_functions.php");
 header('Content-Type: application/json; charset=utf-8');
 
 if (isset($_GET['ids'])) {
+
     $pdo = connect_to_db();
-    $stmt = $pdo->prepare("SELECT name FROM menuItem WHERE itemID IN (:ids)");
+    $stmt = $pdo->prepare("SELECT itemName FROM menuItem WHERE itemID IN (:ids)");
     $stmt->execute([
         ':ids' => $_GET['ids']
     ]); 
