@@ -11,6 +11,9 @@ if (isset($_GET['ids'])) {
         ':ids' => $_GET['ids']
     ]); 
     $data = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    echo json_encode($data);
+    return;
 }
 // Query with blank name if none specified
 $str = '';

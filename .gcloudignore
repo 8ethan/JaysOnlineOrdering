@@ -12,6 +12,8 @@
 # below:
 .git
 .gitignore
+./functions/config.php
+./functions/database_functions.php
 
 # PHP Composer dependencies:
 /vendor/

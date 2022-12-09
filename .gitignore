@@ -1,1 +1,3 @@
 app.yaml
+./functions/config.php
+./functions/database_functions.php
