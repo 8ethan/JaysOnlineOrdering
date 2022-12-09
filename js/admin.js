@@ -7,7 +7,7 @@
     let searchForm;
     let editTable;
     let selectedItem;
-    let editID, editName, editCat, editPrice, editAvail, editImg;
+    let editID_label, editID, editName, editCat, editPrice, editAvail, editImg;
     let currentTable;
 
     window.addEventListener('load',init);
@@ -19,6 +19,7 @@
         searchForm = document.getElementById('searchForm');
         editTable = document.getElementById('editTable');
 
+        editID_label = document.getElementById('editID_label');
         editID = document.getElementById('editID');
         editName = document.getElementById('editName');
         editCat = document.getElementById('editCat');
@@ -114,7 +115,8 @@
         let item = currentTable[rowClicked];
         console.log(Object.entries(item));
 
-        editID.innerHTML = "Item ID: "+item.itemID;
+        editID_label.innerHTML = "Item ID: "+item.itemID;
+        editID.value = item.itemID;
         editName.value = item.itemName;
         editCat.value = item.category;
         editPrice.value = item.price;
