@@ -32,17 +32,17 @@
                     <form id="editForm">
                         <div id="editFormContainer">
                             <div>
-                                <p>Item ID: </p>
+                                <p id=editID>Item ID: </p>
                                 <label for="itemName">Item Name: </label>
-                                <input type="text" name="itemName"><br>
+                                <input type="text" id="editName" name="itemName"><br>
                                 <label for="category">Category:</label>
-                                <input type="text" name="category"><br>
+                                <input type="text" id="editCat" name="category"><br>
                                 <label for="price">Price: $</label>
-                                <input type="number" name="price"><br>
+                                <input type="number" id="editPrice" name="price"><br>
                                 <label for="available">Available:</label>
-                                <input type="checkbox" name="available"><br>
+                                <input type="checkbox" id="editAvail" name="available"><br>
                                 <label for="img">New image:</label>
-                                <input type="file" name="img" accept="image/*"><br>
+                                <input type="file" name="img" id="editImg" accept="image/*"><br>
                                 <input type="submit" value="Save Changes">
                             </div>
                             <div id="itemImage">
