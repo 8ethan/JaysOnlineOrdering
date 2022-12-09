@@ -1,0 +1,10 @@
+#yourOrder {
+    display: block;
+    height: calc(100vh - 125px);
+}
+.basicBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid gray 2px;
+    border-radius: 5px;
+}
