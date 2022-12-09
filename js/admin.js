@@ -98,7 +98,7 @@
         });
 
         currentTable = foodItems;
-        
+
         editTable.innerHTML = innerHTML;
     }
 
@@ -114,7 +114,17 @@
         let item = currentTable[rowClicked];
         console.log(Object.entries(item));
 
-        editID.innerHTML = item.itemID;
+        editID.innerHTML = "Item ID: "+item.itemID;
+        editName.value = item.itemName;
+        editCat.value = item.category;
+        editPrice.value = item.price;
+        if (item.isAvailable==1){
+            editAvail.checked=true;
+        }
+        else {
+            editAvail.checked=false;
+        }
+
         // Object.entries(item).slice(1).forEach(attr =>{
         //     nrHTML += `
         //     <div class="form-row">
