@@ -114,24 +114,16 @@
 
         let item = currentTable[rowClicked];
         console.log(Object.entries(item));
-        let nrHTML = `
-            <h4>Edit: ${item.name_first} ${item.name_last} (${item.username})</h4>
-        `;
-        Object.entries(user).slice(1).forEach(attr =>{
-            nrHTML += `
-            <div class="form-row">
-                <label for="${attr[0]}">${attr[0]}</label>
-                <input type="text" id="${attr[0]}" name="${attr[0]}" value="${attr[1]}">
-            </div>`;
-        })
-        userForm.innerHTML = nrHTML + `
-        <input type='button' value='Save Changes' id='submit'>
-        <input type='button' value='Discard Changes' id='discard'>`;
 
-        let discardBtn = document.getElementById('discard');
-        discardBtn.addEventListener('click', () => {
-            userForm.innerHTML = '';
-        });
+        editID.innerHTML = item.itemID;
+        // Object.entries(item).slice(1).forEach(attr =>{
+        //     nrHTML += `
+        //     <div class="form-row">
+        //         <label for="${attr[0]}">${attr[0]}</label>
+        //         <input type="text" id="${attr[0]}" name="${attr[0]}" value="${attr[1]}">
+        //     </div>`;
+        // })
+
     }
 
 
