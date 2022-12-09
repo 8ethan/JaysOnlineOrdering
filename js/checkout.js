@@ -12,12 +12,15 @@
     }
 
     function getOrder () {
-        let url = "./functions/checkout.php";
+        let url = "./functions/cart.php";
         
+        let data = new FormData();
+        data.append("action","get");
+
         fetch(url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({action: 'get'})
+            body: data
         })
         .then((response) => response.json())
         .then((r) => {
@@ -28,10 +31,10 @@
 
     function update(order) {
 
-        let idsList = [];
-        foodItems.forEach(item => idsList+=item.id);
+        /* let idsList = [];
+        order.forEach(item => idsList+=item.id); */
 
-        fetch(url, {
+        /* fetch(url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({action: 'get'})
@@ -40,32 +43,32 @@
         .then((r) => {
           console.log(r);
           update(r);
-        });
+        }); */
 
         let innerHTML = '';
         innerHTML = `
         <tr id="editHeader">
             <th>Item ID</th>
             <th>Item Name</th>
-            <th>Category</th>
             <th>Price</th>
-            <th>Availability</th>
+            <th>Quantity</th>
+            <th>Notes</th>
         </tr>
         `;
 
-        foodItems.forEach(item => {
+        order.forEach(item => {
             let card = `
             <tr>
-                <td>${item.itemID}</td>
-                <td>${item.itemName}</td>
-                <td>${item.category}</td>
-                <td>${item.price}</td>
-                <td>${item.isAvailable}</td>
+                <td>${item.id}</td>
+                <td>idk</td>
+                <td>idk</td>
+                <td>${item.quantity}</td>
+                <td>${item.notes}</td>
             </tr>
             `
             innerHTML += card;
         });
 
-        editTable.innerHTML = innerHTML;
+        yourOrder.innerHTML = innerHTML;
     }
 })();

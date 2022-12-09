@@ -60,14 +60,19 @@
     }
 
     function updateMenu(foodItems) {
-        menuContainer.innerHTML = '';
+        menuContainer.innerHTML = 'pushButton';
 
         foodItems.forEach(item => {
+            let available = "";
+            if (!item.isAvailable) {
+                available="unavailable";
+            }
+
             let card = `
             <div class="menuItem itemNo${item.itemID}">
                 <img src='https://cdnimg.webstaurantstore.com/images/products/large/520039/1998265.jpg'>
                 <p class="itemName">${item.itemName}<br>$${item.price}</p>
-                <button type="button" class="orderButton pushButton"></button>
+                <button type="button" class="orderButton ${available}"></button>
             </div>
             `;
             menuContainer.innerHTML += card;

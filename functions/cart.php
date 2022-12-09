@@ -5,6 +5,8 @@ require("database_functions.php");
 
 header('Content-Type: application/json; charset=utf-8');
 
+print_r($_POST);
+
 if(!isset($_POST['action'])) return;
 
 switch($_POST['action']) {

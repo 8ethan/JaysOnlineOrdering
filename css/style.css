@@ -219,6 +219,10 @@ nav > a {
 
     transition: opacity .1s, box-shadow .1s, translate .15s;
 }
+.orderButton.unavailable {
+    background-color: gray;
+    background-image: url('../img/bag-icon-unavailable.png');
+}
 
 .orderedItem {
     background-color: #8be675;
