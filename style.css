@@ -75,10 +75,10 @@ h1, h2, h3 {
   align-content: flex-start;
 
   border-top: 1px solid black;
-  /* background-color: white; */
+  background-color: white;/* 
   background: rgb(61,181,230);
   background: linear-gradient(325deg, rgba(61,181,230,1) 0%, rgba(0,75,152,1) 100%);
-  padding: 2px;
+   */padding: 2px;
 }
 
 .sidenav {
@@ -156,34 +156,59 @@ a.active{
   display: none;
 }
 .menu-item {
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   height: 200px;
-  width: 200px;
+  width: 200px;/* 
   border-radius: 5px;
-  background-color: #818181;
+  background-color: #818181; */
   display: flex;
   justify-content: end;
-  flex-direction: column;
+  flex-direction: column;/* 
   box-shadow: 3px 6px #111,
     2px 4px #111,
     1px 2px #111,
     4px 8px #111; /* Makes shadow look extended */
+
+  background: #B9B9B9;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+
+  position: relative;
 }
 .menu-item > p.cat {
   display: none;
 }
 .menu-item > p {
-  margin: 7px 0px;
+  margin: 7px 0px 0px 0px;
 }
 .menu-item > img {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
   border-radius: 4px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 .order-button {
-  width: 100%;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  position: absolute;
+  left: 60%;/* 
+  right: 8.33%;
+  top: 68.42%;
+  bottom: 5.26%; */
+
+  background: linear-gradient(0deg, #9EBDE1, #9EBDE1), #9EE1A5;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */

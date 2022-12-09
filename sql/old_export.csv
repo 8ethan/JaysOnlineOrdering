@@ -1,0 +1,51 @@
+itemID,itemName,category,price,description,calories,isAvailable,imgSource
+1,"French Fries",Sides,2.75,NULL,NULL,1,NULL
+2,"Cheese Fries",Sides,3.75,NULL,NULL,1,NULL
+3,"Curly Fries",Sides,2.75,NULL,NULL,1,NULL
+4,"Onion Rings",Sides,4.25,NULL,NULL,1,NULL
+5,"Mozzarella Sticks",Sides,4.25,NULL,NULL,1,NULL
+6,Pierogies,Sides,3.75,NULL,NULL,1,NULL
+7,"Potato Skins",Sides,5,NULL,NULL,1,NULL
+8,"Tuna Melt","Hot Sandwiches",4.5,NULL,NULL,1,NULL
+9,"Grilled Cheese","Hot Sandwiches",3.5,NULL,NULL,1,NULL
+10,"Grilled Ham & Cheese","Hot Sandwiches",4.5,NULL,NULL,1,NULL
+11,BLT,"Hot Sandwiches",3.75,NULL,NULL,1,NULL
+12,"Turkey Pretzel Melt","Hot Sandwiches",5,NULL,NULL,1,NULL
+13,"Hamburger Sub","Hot Sandwiches",5,NULL,NULL,1,NULL
+14,"Cheeseburger Sub","Hot Sandwiches",4.5,NULL,NULL,1,NULL
+15,Hamburger,Burgers,5,NULL,NULL,1,NULL
+16,Cheeseburger,Burgers,5.5,NULL,NULL,1,NULL
+17,"Bacon Cheddar Burger",Burgers,6,NULL,NULL,1,NULL
+18,"Beyond Burger",Burgers,6,NULL,NULL,1,NULL
+19,"Beef & Cheese","Steak Sandwiches",5,NULL,NULL,1,NULL
+20,"Chicken Cheese","Steak Sandwiches",5.25,NULL,NULL,1,NULL
+21,"Chicken Ranch","Steak Sandwiches",5.25,NULL,NULL,1,NULL
+22,"Buffalo Beef","Steak Sandwiches",5.25,NULL,NULL,1,NULL
+23,"Buffalo Chicken","Steak Sandwiches",5.25,NULL,NULL,1,NULL
+24,"Crispy Chicken","Chicken Sandwiches",5,NULL,NULL,1,NULL
+25,"Buffalo Chicken","Chicken Sandwiches",5,NULL,NULL,1,NULL
+26,"Chicken Parmesan","Chicken Sandwiches",5,NULL,NULL,1,NULL
+27,"Grilled Chicken","Chicken Sandwiches",5,NULL,NULL,1,NULL
+28,"Chicken Strips","Chicken Sandwiches",5.5,NULL,NULL,1,NULL
+29,"Buffalo Chicken Strips","Chicken Sandwiches",5.5,NULL,NULL,1,NULL
+30,"Egg Jay",Breakfast,3,NULL,NULL,1,NULL
+31,"Egg Jay on Bagel",Breakfast,4.25,NULL,NULL,1,NULL
+32,"Hash Brown",Breakfast,1.5,NULL,NULL,1,NULL
+33,"Jays Omelet",Breakfast,4.25,NULL,NULL,1,NULL
+34,"Banana Pita Pocket","Healthy Options",5,NULL,NULL,1,NULL
+35,"Chicken Caesar Pita Pocket","Healthy Options",5.5,NULL,NULL,1,NULL
+36,"Tuna Bowl","Healthy Options",6.5,NULL,NULL,1,NULL
+37,"Chicken Bowl","Healthy Options",6.5,NULL,NULL,1,NULL
+38,"Chicken Bacon Ranch Bowl","Healthy Options",6.5,NULL,NULL,1,NULL
+39,"Cheese Pizza",Pizza,4.5,NULL,NULL,1,NULL
+40,"Pepperoni Pizza",Pizza,5.75,NULL,NULL,1,NULL
+41,"Cheese Flat Bread",Pizza,5.25,NULL,NULL,1,NULL
+42,"South Western Flatbread",Pizza,5.75,NULL,NULL,1,NULL
+43,"Buffalo Chicken Ranch Flatbread",Pizza,5.75,NULL,NULL,1,NULL
+44,"BBQ Chicken Flatbread",Pizza,5.5,NULL,NULL,1,NULL
+45,"Italian Chicken Wrap",Quesadillas,5.25,NULL,NULL,1,NULL
+46,"Cheese Quesadilla",Quesadillas,4.5,NULL,NULL,1,NULL
+47,"Chicken Quesadilla",Quesadillas,6,NULL,NULL,1,NULL
+48,"Crispy Chicken Quesadilla",Quesadillas,6,NULL,NULL,1,NULL
+49,"Buffalo Chicken Quesadilla",Quesadillas,5,NULL,NULL,1,NULL
+50,"Chicken Fajita Quesadilla",Quesadillas,6.25,NULL,NULL,1,NULL
